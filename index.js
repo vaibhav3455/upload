@@ -1,6 +1,11 @@
 const express=require('express');
 const app=express();
+const PORT=process.env.PORT||3000
 app.get('/',(req,resp)=>
 {
     resp.send('Marwadi University');
-}).listen(4200);
+});
+app.listen(PORT,()=>
+{
+    console.log(`Appplication listening on port ${PORT}`);
+})
